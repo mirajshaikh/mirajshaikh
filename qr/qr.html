@@ -1,0 +1,133 @@
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="lightbox.js"></script>
+  </head>
+  <body>
+
+  <div class="container">
+    <input id="qrcode" type="text" name="qr" placeholder="Type Here ">
+    <button id="qrbtn"> Get QR </button>
+    <a id="light" href="overlay.png" rel="lightbox"><img id="qrimg" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=qrgenerator.com" width=150></a>
+  </div>
+
+  <script>
+ //	$(document).ready(function(){
+
+	//	$("#qrbtn").click( function(){
+	//		var data = $("#qrcode").val();
+	//		if(data ==""){
+		//		alert("The input Can't be Empty");}
+	//		else{					
+	//			$("#qrimg").attr('src', "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + data );
+	//		}
+		
+
+//});
+
+
+/*
+  	 $(document).ready(function(){
+  	 $('#qrcode').on('keypress' ,function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+			var data = $("#qrcode").val();
+			if(data ==""){
+				alert("The input Can't be Empty");}
+			else{					
+				$("#qrimg").attr('src', "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + data );
+			}; 
+
+			$('#qrcode').keypress(function(event){
+            $('#qrcode').click();
+    });
+};
+});
+  	});*/
+
+ $(document).ready(function(){
+
+  	 $('#qrbtn').click(function(event){
+  	 	$('#qrcode').keypress(function(event){
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				 if(keycode == '13'){
+	            $('#qrbtn').click();
+	  			};
+});
+  	 	var data = $("#qrcode").val();
+  	 	var qrlink = ("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + data)
+			if(data ==""){
+				alert("The input Can't be Empty");}
+			else{					
+				$("#qrimg").attr('src' , qrlink );
+				$("#light").attr('href' , "https://api.qrserver.com/v1/create-qr-code/?size=" + "350x350&data=" + data);
+				
+};
+ });
+  	});
+
+
+  </script>
+
+
+
+
+
+  <style type="text/css">
+  	*{
+  		padding: 0;
+  		margin: 0;
+  	}
+  	.container{
+  		height: 100vh;
+  		width: 100%;
+  		margin-left: auto;
+  		margin-right: auto;
+  		background-image: url("https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+  	}
+
+	#qrcode {
+	  margin: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  padding: 5px 10px;
+	  border: 1px solid #111;
+	}
+
+	#qrbtn{
+	  margin: 0;
+	  position: absolute;
+	  top: 60%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  padding: 12px 35px;
+	  border-radius: 6px;
+	  background-color: #fff;
+	  color: #111;
+	  font-weight: 500;
+	  border: none;
+	  box-shadow: 0px 0px 5px #000;
+	  font-size: 17px;
+	}
+
+	#qrimg{
+		margin: 0;
+	  position: absolute;
+	  top: 30%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+
+  </style>
+
+  </body>
+</html>

@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
+        *{
+            font-family: overpass; 
+        }
 body{
     margin: 0;
     padding: 0;
@@ -37,11 +41,15 @@ background-size: cover;
    border-radius: 5px;
 }
 
+
+
 body a{
     color: rgb(63, 63, 63);
-    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
-
+.header a {
+    color: #fff;
+}
 .whatsapp:hover, .message:hover{
     box-shadow: 0px 0px 20px #000;
 
@@ -65,11 +73,14 @@ body a{
     </style>
 </head>
 <body>
+    <div class="header"  style="padding: 10px 50px; display: grid; grid-template-columns: 2fr 1fr;">  <div style="text-align: left;"> <a href="/index.html"><h2> Miraj Shaikh</h2></a></div>
+	<div style="margin: auto;"><a href="/message"  style="padding: 10px 50px;"> Message </a> <a href="/qr">QR Code </a> </div> 
+</div>
         <div class="container">
                 <div class="grid">
-                    <a href="/sms.html"> <div class="message"><img src="email.svg" height="50px" alt="chat"><h3 style="display: inline;position: absolute; margin-left: 20px;">SMS</h3></div></a>
+                    <a href="/message/sms"> <div class="message"><img src="email.svg" height="50px" alt="chat"><h3 style="display: inline;position: absolute; margin-left: 20px;">SMS</h3></div></a>
 
-                        <a href="/whatsapp.html"> <div class="whatsapp"><img src="whatsapp.svg" height="50px" alt="chat"><h3 style="display: inline;position: absolute; margin-left: 20px;">WHATSAPP</h3></div></a>
+                        <a href="/message/whatsapp.html"> <div class="whatsapp"><img src="whatsapp.svg" height="50px" alt="chat"><h3 style="display: inline;position: absolute; margin-left: 20px;">WHATSAPP</h3></div></a>
                 </div>
         </div>
 </body>

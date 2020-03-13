@@ -3,12 +3,15 @@
   <title>My Now Amazing Webpage</title>
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="lightbox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="lightbox.js"></script>
   </head>
   <body>
-
+	<div class="header"  style="padding: 10px 50px; display: grid; grid-template-columns: 3fr 1fr;">  <div style="text-align: left;"> <a href="/index.html"><h2> Miraj Shaikh</h2></a></div>
+	<div><a href="/message"  style="padding: 0px 50px"> Message </a> <a href="/qr">QR Code </a> </div> 
+</div>
   <div class="container">
     <input id="qrcode" type="text" name="qr" placeholder="Type Here ">
     <button id="qrbtn"> Get QR </button>
@@ -80,17 +83,24 @@
   <style type="text/css">
   	*{
   		padding: 0;
-  		margin: 0;
-  	}
+		margin: 0;
+		font-family: overpass;  
+	  }
+	  a{
+	  color: #4a4a4a;
+	  text-decoration: none;
+    }
+	  body{
+		background-image: url("https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	  }
   	.container{
   		height: 100vh;
   		width: 100%;
   		margin-left: auto;
   		margin-right: auto;
-  		background-image: url("https://images.pexels.com/photos/743986/pexels-photo-743986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-position: center;
   	}
 
 	#qrcode {
